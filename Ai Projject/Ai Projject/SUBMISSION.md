@@ -4,9 +4,7 @@
 
 This is a complete, production-ready implementation of a **Healthcare RAG-powered Assistant** that retrieves medical guidelines and research summaries in both English and Japanese.
 
-**Built by**: [Your Full Name]  
-**For**: T1 AI Ltd. - Sr. LLM/Backend Engineer Technical Assessment  
-**Submission Date**: November 7, 2025
+**Built by**: Md Mahedi Hasan Turjoy  
 
 ---
 
@@ -446,9 +444,3 @@ This is a **complete, production-ready implementation** of a Healthcare RAG Assi
 ✅ 100% original, non-AI-generated code  
 
 **Ready for submission and production deployment.**
-
----
-
-**Submission File**: `SLLM-AAI-[Your Full Name].pdf`  
-**Contact**: info@T1ai.tech  
-**Website**: www.T1ai.tech
