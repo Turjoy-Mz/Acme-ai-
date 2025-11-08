@@ -1,0 +1,32 @@
+services:
+  healthcare-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: healthcare-rag-assistant
+    ports:
+      - "8000:8000"
+    environment:
+      - API_KEY=${API_KEY:-T1-ai-secret-key-2025}
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=False
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - healthcare-network
+    labels:
+      - "com.healthcare.description=Healthcare RAG Assistant API"
+      - "com.healthcare.version=1.0.0"
+
+networks:
+  healthcare-network:
+    driver: bridge
